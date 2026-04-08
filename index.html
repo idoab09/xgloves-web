@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xGloves — Cyber Athletic Scrollytelling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600;14..32,700;14..32,800&family=Kanit:ital,wght@1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <main>
+      <header class="top-ui">
+        <div class="brand">xGloves</div>
+        <div class="model-switcher" aria-label="Switch glove model">
+          <button id="prevModel" class="arrow-btn" aria-label="Previous model">←</button>
+          <div class="model-label-wrap">
+            <p class="model-kicker">ACTIVE MODEL</p>
+            <h2 id="modelName">Model X1 — The Powerhouse</h2>
+          </div>
+          <button id="nextModel" class="arrow-btn" aria-label="Next model">→</button>
+        </div>
+      </header>
+
+      <div class="glove-stage" aria-hidden="true">
+        <div class="x-backdrop">X</div>
+        <canvas id="gloveCanvas"></canvas>
+        <p id="modelTagline" class="model-tagline">Max Impact · Reinforced Wrist Support · Slow-Recovery Memory Foam</p>
+      </div>
+
+      <section class="story section-landing" id="landing">
+        <div class="content-panel">
+          <p class="eyebrow">CYBER-ATHLETIC PERFORMANCE</p>
+          <h1>Impact Engineered for the Future Ring.</h1>
+          <p>
+            Immersive high-contrast training gear tuned for elite timing, precision, and power transfer.
+          </p>
+          <div class="stats-grid">
+            <article>
+              <h3>Power</h3>
+              <div class="meter"><span id="powerBar"></span></div>
+            </article>
+            <article>
+              <h3>Speed</h3>
+              <div class="meter"><span id="speedBar"></span></div>
+            </article>
+            <article>
+              <h3>Agility</h3>
+              <div class="meter"><span id="agilityBar"></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story section-breakdown" id="breakdown">
+        <div class="content-panel">
+          <p class="eyebrow">MATERIAL BREAKDOWN</p>
+          <h2>Hotspot Technical Specs</h2>
+          <p>Scroll to lock side profile, then inspect construction points.</p>
+          <div class="hotspot-layer">
+            <button class="hotspot" data-spec="outer">1</button>
+            <button class="hotspot" data-spec="foam">2</button>
+            <button class="hotspot" data-spec="wrist">3</button>
+          </div>
+          <article class="spec-card" id="specCard">
+            <h3>Outer Shell</h3>
+            <p>Engineered synthetic leather with impact-dispersing micro-grain emboss.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="story section-cta" id="cta">
+        <div class="content-panel form-layout">
+          <div>
+            <p class="eyebrow">PRE-ORDER INITIATED</p>
+            <h2>Claim the Next Gen xGlove.</h2>
+            <p>Choose your fit and secure first production access.</p>
+          </div>
+          <form class="checkout-form">
+            <label>
+              Size
+              <select>
+                <option>12oz</option>
+                <option>14oz</option>
+                <option>16oz</option>
+              </select>
+            </label>
+            <label>
+              Shipping Details
+              <textarea rows="3" placeholder="Full name, address, city, zip"></textarea>
+            </label>
+            <button type="button" class="preorder-btn">Pre-Order Now</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
